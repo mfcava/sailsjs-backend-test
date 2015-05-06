@@ -1,0 +1,46 @@
+/* 
+  Generic Styles -  used in more that 1 page 
+---------------------------------------------------------------------------- */
+html, body 			{ min-height: 100%;  }
+.navbar 			{ margin-bottom:0px; }
+.fill				{ min-height: 100vh; }
+.post-tag 			{ margin-right:0.5em; margin-bottom: 1em;}
+.sign-up 			{ background: rgba(0,0,0,0.1); border-top: 1px solid rgba(0,0,0,0.1); }
+.flash-message 		{ margin-top:1.5em;}
+.footer 			{ bottom: 0; width: 100%;  height: 60px; background-color: #f5f5f5; }
+
+
+/* Css specific pages */
+/* Posts list - main page 
+---------------------------------------------------------------------------- */
+.home-main-post							{ min-height: 100vh; min-width: 100%; background-position: 0 0; background-repeat: no-repeat; background-size: 100% auto; }
+.home-main-post .caption-txt 		    { margin-top: 30%; text-align: center;}
+.home-main-post .caption-txt h1 a 		{ color: #FFFFFF;}
+.home-main-post .caption-txt h1 a:hover { text-decoration: none; text-shadow: 0px -1px rgba(0,0,0,0.40);}
+.home-main-post .caption-txt h1         { font-size: 7em; text-align:right;text-shadow: 0px -2px rgba(0,0,0,0.30);}
+.home-main-post .caption-txt h1 small   { font-size: 0.25em; clear: right; display: block; color: #337AB7; text-shadow: 2px 2px rgba(255,255,255,0.20);}
+.home-main-post .caption-txt h1 small a { text-shadow: 2px 2px rgba(0,0,0,0.20);}
+.home-main-post .caption-txt p 		    { font-size: 1.5em; color: #F2F2F2; text-shadow: 1px 1px rgba(0,0,0,0.20);}
+
+.home-other-post { margin-top: 1em; background: linear-gradient(rgba(0,0,0,0.30),rgba(0,0,0,0.1),rgba(0,0,0,0.1)); border-top: 1px solid rgba(0,0,0,0.10); border-right: 1px solid rgba(0,0,0,0.10); border-left: 1px solid rgba(0,0,0,0.10);padding-bottom:1em; border-radius: 3px; }
+
+.home-other-post h1 	{ border-top: 2px solid #337AB7; text-shadow: 1px 1px rgba(255,255,255,0.20); min-height:2.4em; border-bottom: 2px solid #337AB7; font-size:1.9em;}
+.home-other-post h6   	{ color: #FFFFFF; text-shadow: 1px 1px rgba(0,0,0,0.20);}
+.home-other-post h6 a 	{ text-shadow: 1px 1px rgba(255,255,255,0.20);}
+.home-other-post p 		{ text-shadow: 1px 1px rgba(255,255,255,0.20); margin-top:0.5em; }
+.home-other-post .thumb	{ height:150px; background-size: 120% auto; background-position: 0 10%; border-radius:3px ; background-repeat: no-repeat; margin-top:1.25em; overflow:hidden;}
+
+/* Posts details - 
+---------------------------------------------------------------------------- */
+.post-detail       	    { position: relative; background-color: #fefefe; overflow: hidden; }
+.post-detail .coverpad  { padding-left:0px; }
+.post-detail h1 	    { margin-top: 25%;}
+.post-detail .cover     { height: 300px; overflow: hidden; border-top: 4px solid #337AB7;margin-left:0px; background-position: 50%;}
+.post-detail .cover img { height: 100%; margin-top: -1em; margin-left:-50%}
+.post-detail .btn-group { margin-top: 1.5em; margin-bottom:1.5em;}
+
+/* Posts edit - main page 
+---------------------------------------------------------------------------- */
+.post-detail.edit .form-group.body textarea { height: 30em;}
+
+

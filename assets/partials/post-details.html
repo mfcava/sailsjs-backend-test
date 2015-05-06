@@ -1,0 +1,48 @@
+<article class="post-detail">
+	<div class="container-fluid">
+		<div class="row">
+    		<div class="col-lg-6 coverpad"> 
+				<div class="cover fill" ng-style="{'background-image':'url(/images/upload/'+post.coverImage+')'}">
+        		 <!-- <img ng-src="/images/upload/{{post.coverImage}}" > --></div>
+			</div>
+    		<div class="col-lg-6">
+					<div class="col-lg-12 alert alert-warning alert-dismissible" role="alert" ng-show="flash.getMessage()">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<p><strong>Whassup:</strong> {{flash.getMessage()}}</p>
+					</div>
+					<h1 class="col-lg-12">{{post.title}}<small> <i>added by </i><a href="#/user/{{post.owner.id}}">{{post.owner.nickname}}</a></small></h1>
+					<div class="col-lg-12 btn-group tool" role="group" aria-label="..." ng-show="post.owner.id == currentUser.id">
+						<button type="button" class="btn btn-default btn-sm" ng-click="deletePost(post.id)">Delete</button>
+						<a href="#/post/{{post.id}}/edit" type="button" class="btn btn-default btn-sm" >Modify</a>
+						<button type="button" class="btn btn-default btn-sm" ng-click="deletePost(post.id)">New</button>
+					</div>
+					<p class="col-lg-12">{{post.content}}</p>
+					<aside class="col-lg-12">
+						<div class="panel panel-default">
+							<div class="panel-heading"><h3 class="panel-title">Related Tag</h3></div>
+							<div class="panel-body"><span ng-repeat="tag in post.tags" class="label label-primary post-tag">{{tag.name}}</span></div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading"><h3 class="panel-title">Related Contents</h3></div>
+							<div class="panel-body"></div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading"><h3 class="panel-title">Comments</h3></div>
+							<div class="panel-body">
+								<div class="col-lg-12 fb-comments" data-href="http://winterfell-15-194783.euw1-2.nitrousbox.com{{location.path()}}" data-numposts="5" data-colorscheme="light"></div>
+							<!--
+								<div class="col-md-3">
+									<blockquote class="comment">
+										<p>Comments body </p>
+										<footer>Comments by: anonymous</footer>
+									</blockquote>
+								</div>
+							-->
+		    				</div>			
+						</div>
+					</aside>
+				</div>
+			</div>
+		</div>
+</article>
+	

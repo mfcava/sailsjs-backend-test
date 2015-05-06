@@ -1,0 +1,68 @@
+<section id="contents_list"> 
+    <!-- -->
+    <!-- -->
+	<div class="container-fluid" >
+		<div ng-repeat="cover in latestPost | limitTo : 1" id="post.id" class="row fill home-main-post" ng-style="{'background-image':'url(/images/upload/'+cover.coverImage+')'}">
+			<div class="container" >
+				<article>
+					<div class="caption-txt col-md-12">
+						<h1><a href="#/post/{{cover.id}}/">{{cover.title}}</a> <small>article wrote by <a href="#/user/{{cover.owner.id}}">{{cover.owner.nickname}}</a></small></h1>
+						<p>{{cover.content | limitTo:postPreviewLimit }}... <a href="#/post/{{cover.id}}/">[read more]</a></p>
+					</div>
+				</article>
+			</div>
+		<!-- </div> -->
+    	<!-- -->
+    	<!-- <div class="row"> -->
+			<div class="container home-other-post">
+				<div class="row clearfix">
+					<article ng-repeat="post in posts" id="post.id">
+					<div class="col-md-4 col-xs-12">
+						<div class="col-md-12 col-xs-6 pull-right">
+							<h1><a href="#/post/{{post.id}}/">{{post.title}}</a></h1>
+							<h6>article wrote by <a href="#/user/{{post.owner.id}}">{{post.owner.nickname}}</a></h6>
+						</div>
+						<div class="col-md-12 col-xs-6 pull-left">
+							<div class="thumb" ng-style="{'background-image':'url(/images/upload/'+post.coverImage+')'}" ></div>
+						</div>
+						<p class="col-md-12 col-xs-6 pull-right">{{post.content | limitTo:postPreviewLimit }}... <a href="#/post/{{post.id}}/">[read more]</a></p>
+					</article>
+				</div>
+				<div class="row clearfix">
+					<center>
+						<nav>
+					  	  <ul class="pagination">
+					    	  <li ng-class="{'disabled': currentPage == 0 }" ng-click="setPage('prev')">
+					      		<a href="" aria-label="Previous" ng-click="prevPostPage()" >
+					        		<span aria-hidden="true">&laquo;</span>
+					      	  	</a>
+					    	  </li>
+							  <!-- -->
+							  <!-- -->
+					    	  <li ng-repeat="p in getPostsNumber(pageNumber) track by $index" ng-class="{'active': currentPage == $index }" ><a href="" ng-click="setPage($index)" >{{$index}}</a></li>
+					    	  <!-- -->
+							  <!-- -->
+							  <li ng-class="{'disabled': currentPage == 1 }">
+					      		<a href="" aria-label="Next" ng-click="setPage('next')">
+					        		<span aria-hidden="true">&raquo;</span>
+					      	    </a>
+					    	  </li>
+					  	 </ul>
+						</nav>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="sign-up"> 
+	<div class="row" >
+		<div class="container sign-up" >
+			<h1>REGISTER NOW</h1>
+			<div class="col-md-6"><h2>Insert your email</h2></div>
+			<div class="col-md-6"><h2>Password</h2></div>
+			<div class="col-md-12"><h3>Flag our T&C</h3></div>
+		</div>
+	</div>
+</section>
+<hr>
