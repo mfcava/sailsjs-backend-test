@@ -29,6 +29,9 @@
     "jwt-simple": "^0.3.0",
     "mosca": "^0.29.0"
   },
+  "engines": {
+    "node": "0.10.x"
+  },
   "scripts": {
     "start": "node app.js",
     "debug": "node debug app.js"
@@ -36,7 +39,7 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/action/Aria-auth.git"
+    "url": "git://github.com/mfcava/sailsjs-backend-test.git"
   },
   "author": "action",
   "license": ""
