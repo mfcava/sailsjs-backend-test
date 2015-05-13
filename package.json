@@ -26,7 +26,8 @@
     "waterlock-local-auth": "0.0.6",
     "sails-mongo": "^0.10.7",
     "coffee-script": "^1.9.2",
-    "jwt-simple": "^0.3.0"
+    "jwt-simple": "^0.3.0",
+    "mosca": "^0.29.0"
   },
   "scripts": {
     "start": "node app.js",

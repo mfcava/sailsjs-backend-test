@@ -35,8 +35,7 @@ html, body 			{ min-height: 100%;  }
 .post-detail       	    { position: relative; background-color: #fefefe; overflow: hidden; }
 .post-detail .coverpad  { padding-left:0px; }
 .post-detail h1 	    { margin-top: 25%;}
-.post-detail .cover     { height: 300px; overflow: hidden; border-top: 4px solid #337AB7;margin-left:0px; background-position: 50%;}
-.post-detail .cover img { height: 100%; margin-top: -1em; margin-left:-50%}
+.post-detail .cover     { height: 300px; overflow: hidden; border-top: 4px solid #337AB7;margin-left:0px; background-position: 50% top; background-repeat: no-repeat;}
 .post-detail .btn-group { margin-top: 1.5em; margin-bottom:1.5em;}
 
 /* Posts edit - main page 
