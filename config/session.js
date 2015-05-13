@@ -42,7 +42,8 @@ module.exports.session = {
   ***************************************************************************/
 
   adapter: 'connect-redis',
-  	url: process.env.REDIS_URL
+  	url: process.env.REDIS_URL, 
+	no_ready_check: true
   /***************************************************************************
   *                                                                          *
   * The following values are optional, if no options are set a redis         *
