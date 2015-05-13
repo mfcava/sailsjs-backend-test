@@ -28,7 +28,7 @@
     "coffee-script": "^1.9.2",
     "jwt-simple": "^0.3.0",
     "mosca": "^0.29.0",
-    "connect-redis": "^1.4.5"
+    "connect-redis": "1.4.5"
   },
   "engines": {
     "node": "0.10.x"
