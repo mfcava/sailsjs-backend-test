@@ -49,7 +49,8 @@ module.exports.sockets = {
   // port: 6379,
   // db: 'sails',
   // pass: '<redis auth password>'
-
+  adapter: 'redis',
+  	url: process.env.REDIS_URL
 
 
  /***************************************************************************
@@ -124,7 +125,6 @@ module.exports.sockets = {
   //   // By default: do nothing.
   //   return cb();
   // },
-
 
 
 
