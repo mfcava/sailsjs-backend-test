@@ -1,7 +1,9 @@
 OpenShift - 
 
-	- MongoDB 2.4 database added.  Please make note of these credentials:
-   		- Root User:     admin
-   	 	- Root Password: hUfpDZ-bPNJE
-   	 	- Database Name: aria
-		- Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
+MongoDB 2.4 database added.  Please make note of these credentials:
+
+   Root User:     admin
+   Root Password: 9VNcrXgcTK9h
+   Database Name: backend01
+
+Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/

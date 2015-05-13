@@ -17,7 +17,7 @@ module.exports = {
    * environment (see config/connections.js and config/models.js )           *
    ***************************************************************************/
    models: {
-      connection: 'MongodbServer_prod'
+      connection: 'MongodbServer_prod_heroku'
    },
 
   /***************************************************************************

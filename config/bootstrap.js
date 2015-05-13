@@ -13,8 +13,8 @@ module.exports.bootstrap = function(cb) {
 	var mosca = require('mosca');
 	var pubsubsettings = {
 	  //using ascoltatore
-	  type: 'mongo',        
-	  url: 'mongodb://localhost:27017/mqtt',
+	  type: 'mongo',   	    
+	  url: process.env.MONGOLAB_URI+'/mqtt',
 	  pubsubCollection: 'ascoltatori',
 	  mongo: {}
 	};
