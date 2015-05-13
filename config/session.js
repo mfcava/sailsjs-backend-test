@@ -42,13 +42,9 @@ module.exports.session = {
   ***************************************************************************/
 
   adapter: 'redis',
-  	// url: process.env.REDIS_URL, 
-	   host: 'ec2-184-73-243-91.compute-1.amazonaws.com',
-	   port: 6629,
-	     db: 'heroku_app36812550',
-	   pass: 'pcos13q3llua0rrk8578mlt53a',
-	   no_ready_check: true,
-	   prefix: 'sess:'
+  	  url: process.env.REDIS_URL, 
+	   db: 'gliding-softly-4109',
+	  no_ready_check: true
   /***************************************************************************
   *                                                                          *
   * The following values are optional, if no options are set a redis         *
