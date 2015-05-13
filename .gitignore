@@ -38,8 +38,9 @@
 #    development.
 # 
 ################################################
-
+doc/
 config/local.js
+config/connections.js
 
 
 
