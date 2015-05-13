@@ -56,14 +56,6 @@ module.exports.connections = {
   * Run: npm install sails-mongo                                             *
   *                                                                          *
   ***************************************************************************/
-  MongodbServer_dev: {
-    adapter: 'sails-mongo',
-    host: '127.0.0.1',
-    port: 27017,
-    // user: 'username',
-    // password: 'password',
-    database: 'aria_dev'
-  },
   MongodbServer_prod_heroku: {
 	  adapter: 'sails-mongo',
       url: process.env.MONGOLAB_URI+'/aria_prod',
