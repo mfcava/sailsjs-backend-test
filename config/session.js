@@ -42,9 +42,13 @@ module.exports.session = {
   ***************************************************************************/
 
   adapter: 'redis',
-  	  url: process.env.REDIS_URL, 
-	   db: 'gliding-softly-4109',
-	  no_ready_check: true
+  	// url: process.env.REDIS_URL, 
+	   host: process.env.REDIS_HOST
+	   port: process.env.REDIS_PORT,
+	     db: process.env.REDIS_DB,
+	   pass: process.env.REDIS_PASS,
+	   prefix: 'sess:',
+	   no_ready_check: true
   /***************************************************************************
   *                                                                          *
   * The following values are optional, if no options are set a redis         *
