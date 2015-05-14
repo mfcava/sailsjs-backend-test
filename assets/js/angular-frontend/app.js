@@ -72,7 +72,7 @@ AriaApp.config(['$routeProvider', '$httpProvider', function ($routeProvider, $ht
 			   };
 			}]);
 			
-	}]);
+	} ]);
 
 
 
