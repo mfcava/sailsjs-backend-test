@@ -11,7 +11,7 @@ AriaApp.run(['$rootScope','$localStorage', '$location', function($rootScope, $lo
 	$rootScope.password = '';
 	$rootScope.email    = '';
 	$rootScope.location = $location;
-});
+} ]);
 
 AriaApp.config(['$routeProvider', '$httpProvider', function ($routeProvider, $httpProvider) {
 		$routeProvider.

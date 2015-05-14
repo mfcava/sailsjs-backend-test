@@ -61,7 +61,7 @@ var AriaDirective = angular.module('AriaDirective', []);
 			    		// or server returns response with an error status.
 			    	});
             }
-	});
+	} ]);
 
     /* *********************************************************************** */
 	
