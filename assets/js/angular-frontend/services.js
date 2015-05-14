@@ -38,7 +38,7 @@ var AriaDirective = angular.module('AriaDirective', []);
     *****************************************************************************
     ****************************************************************************/
 
-	AriaServices.run(function($rootScope, $http) {
+	AriaServices.run(['$rootScope', '$http', function($rootScope, $http) {
 	    $rootScope.signIn = function() {
 			var formData = {
 			    email: $rootScope.email,
@@ -65,7 +65,7 @@ var AriaDirective = angular.module('AriaDirective', []);
 
     /* *********************************************************************** */
 	
-	AriaServices.run(["$rootScope", "$localStorage", function($rootScope, $localStorage) {
+	AriaServices.run([ '$rootScope', '$localStorage', function($rootScope, $localStorage) {
 	    $rootScope.setToken = function(data) { 
 			$localStorage.token = data.token;
 			$localStorage.currentUser = data.user;
@@ -76,7 +76,7 @@ var AriaDirective = angular.module('AriaDirective', []);
 
     /* *********************************************************************** */
 
-	AriaServices.run( [ "$rootScope", "$http", function($rootScope, $http) {
+	AriaServices.run( [ '$rootScope', '$http', function($rootScope, $http) {
 	    $rootScope.signOut = function() {
 			$http({
 				 method: 'GET',
@@ -98,7 +98,7 @@ var AriaDirective = angular.module('AriaDirective', []);
 
     /* *********************************************************************** */
 	
-	AriaServices.run([ "$rootScope", "$localStorage", function($rootScope, $localStorage) {
+	AriaServices.run([ '$rootScope', '$localStorage', function($rootScope, $localStorage) {
 	    $rootScope.removeToken = function(data) { 
 			delete $localStorage.token;
 			delete $rootScope.token;

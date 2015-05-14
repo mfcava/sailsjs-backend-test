@@ -1,7 +1,7 @@
 var AriaApp = angular.module('AriaApp', [ 'ngRoute', 'ngResource','ngStorage','AriaControllers','AriaServices','AriaDirective' ]);
 
 
-AriaApp.run(function($rootScope, $localStorage, $location) {
+AriaApp.run(['$rootScope','$localStorage', '$location', function($rootScope, $localStorage, $location) {
 	if ($localStorage.token) {
 		$rootScope.token = $localStorage.token;
 	}
