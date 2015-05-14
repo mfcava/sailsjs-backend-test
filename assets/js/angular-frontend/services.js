@@ -16,7 +16,7 @@ var AriaDirective = angular.module('AriaDirective', []);
     	});
   	}]);
 
-	AriaServices.factory("flash", function($rootScope) {
+	AriaServices.factory("flash", [ function($rootScope) {
 		var queue = [];
 		var currentMessage = "";
 
@@ -28,7 +28,7 @@ var AriaDirective = angular.module('AriaDirective', []);
 			setMessage: function(message) { queue.push(message); },
 	        getMessage: function() { return currentMessage; }
 	  	};
-	});
+	}]);
 
 
     /* **************************************************************************
@@ -65,22 +65,22 @@ var AriaDirective = angular.module('AriaDirective', []);
 
     /* *********************************************************************** */
 	
-	AriaServices.run(function($rootScope, $localStorage) {
+	AriaServices.run(["$rootScope", "$localStorage", function($rootScope, $localStorage) {
 	    $rootScope.setToken = function(data) { 
 			$localStorage.token = data.token;
 			$localStorage.currentUser = data.user;
 			$rootScope.token = data;
 			$rootScope.currentUser = data.user;
 		}
-    });
+    } ]);
 
     /* *********************************************************************** */
 
-	AriaServices.run(function($rootScope, $http) {
+	AriaServices.run( [ "$rootScope", "$http", function($rootScope, $http) {
 	    $rootScope.signOut = function() {
 			$http({
-				method: 'GET',
-				url: '/auth/logout', 
+				 method: 'GET',
+				    url: '/auth/logout', 
 				headers: {'Content-Type': 'application/form-data'}
 				}).
 					success(function(data, status, headers, config) {
@@ -94,20 +94,20 @@ var AriaDirective = angular.module('AriaDirective', []);
 			    		// or server returns response with an error status.
 			    	});
             }
-	});
+	} ]);
 
     /* *********************************************************************** */
 	
-	AriaServices.run(function($rootScope, $localStorage) {
+	AriaServices.run([ "$rootScope", "$localStorage", function($rootScope, $localStorage) {
 	    $rootScope.removeToken = function(data) { 
 			delete $localStorage.token;
 			delete $rootScope.token;
 		}
-    });
+    } ]);
 
 
 
-	AriaServices.directive('ngEnter', function () {
+	AriaServices.directive('ngEnter', [ function () {
 	    return function (scope, element, attrs) {
 	        element.bind("keydown keypress", function (event) {
 	            if(event.which === 13) {
@@ -119,7 +119,7 @@ var AriaDirective = angular.module('AriaDirective', []);
 	            }
 	        });
 	    };
-	});
+	} ]);
 
 
 

@@ -46,6 +46,17 @@ module.exports.bootstrap = function(cb) {
 	sails.log.info('Client Disconnected:', client.id);
 	});
 	
+	
+	// ---
+	var MailChimpAPI = require('mailchimp').MailChimpAPI;
+	var apiKey = process.env.MAILCHIMP_KEY;
+
+	try { 
+	    var MailChimp = new MailChimpAPI(apiKey, { version : '2.0' });
+	} catch (error) {
+	    sails.log.debug(error.message);
+	}
+	
   // It's very important to trigger this callback method when you are finished
   // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
   cb();

@@ -111,6 +111,11 @@ AriaControllers.controller('PostsCtrl', ['$scope', 'Post', function($scope, Post
        return new Array(pageNumber);
   };
   
+  
+  $scope.MailSubscribe = function () {
+
+  };
+  
 }]);
 
 
