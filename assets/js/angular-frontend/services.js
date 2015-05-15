@@ -16,7 +16,7 @@ var AriaDirective = angular.module('AriaDirective', []);
     	});
   	}]);
 
-	AriaServices.factory("flash", [ function($rootScope) {
+	AriaServices.factory("flash", ['$rootScope', function($rootScope) {
 		var queue = [];
 		var currentMessage = "";
 

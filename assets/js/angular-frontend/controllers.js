@@ -220,7 +220,7 @@ AriaControllers.controller('PostEditCtrl', ['$scope', '$routeParams', 'Post', '$
 	
 	$scope.findTag = function (TagName) { 
 		if (TagName != '') {
-	  		io.socket.get("/post/findbytagname?name="+TagName, function (resData) {
+	  		io.socket.get("/post/findTagByName?name="+TagName, function (resData) {
 				if (typeof resData !== 'undefined' ){
 					$scope.autocompleteTags = resData;
 					$scope.$apply();
