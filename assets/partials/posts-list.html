@@ -2,7 +2,7 @@
     <!-- -->
     <!-- -->
 	<div class="container-fluid" >
-		<div ng-repeat="cover in latestPost | limitTo : 1" id="post.id" class="row fill home-main-post" ng-style="{'background-image':'url(/images/upload/'+cover.coverImage+')'}">
+		<div ng-repeat="cover in latestPost | limitTo : 1" id="post.id" class="row fill home-main-post" ng-style="{'background-image':'url(/got/image/'+cover.coverImage+')'}">
 			<div class="container" >
 				<article>
 					<div class="caption-txt col-md-12">
@@ -13,7 +13,7 @@
 			</div>
 		<!-- </div> -->
     	<!-- -->
-    	<!-- <div class="row"> -->
+    	<!-- Other Post -->
 			<div class="container home-other-post">
 				<div class="row clearfix">
 					<article ng-repeat="post in posts" id="post.id">
@@ -23,7 +23,7 @@
 							<h6>article wrote by <a href="#/user/{{post.owner.id}}">{{post.owner.nickname}}</a></h6>
 						</div>
 						<div class="col-md-12 col-xs-6 pull-left">
-							<div class="thumb" ng-style="{'background-image':'url(/images/upload/'+post.coverImage+')'}" ></div>
+							<div class="thumb" ng-style="{'background-image':'url(/got/image/'+post.coverImage+'/small)'}" ></div>
 						</div>
 						<p class="col-md-12 col-xs-6 pull-right">{{post.content | limitTo:postPreviewLimit }}... <a href="#/post/{{post.id}}/">[read more]</a></p>
 					</article>

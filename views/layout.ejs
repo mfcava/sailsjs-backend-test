@@ -29,8 +29,6 @@
     -->
 
     <!--STYLES-->
-    <link rel="stylesheet" href="/styles/bootstrap-3.3.4/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="/styles/bootstrap-3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/custom-style.css">
     <link rel="stylesheet" href="/styles/importer.css">
     <!--STYLES END-->
@@ -64,6 +62,7 @@
 				    <button type="submit" class="btn btn-default">Submit</button>
 				</form>
 				<ul class="nav navbar-nav navbar-right">
+						<li ng-show="token"><a href="#/post/new">New Posts</a></li>
 				        <li class="dropdown">
 				          <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login<span class="caret"></span></a>
 				          <ul class="dropdown-menu" role="menu">
@@ -88,11 +87,51 @@
 	
     <%- body %>
 
+
     <footer class="footer">
-      <div class="container-fluid">
-      <p>You're looking at: <code><%= view.pathFromApp + '.' +view.ext %></code></p>
-      </div>
-    </footer>
+      <div class="container-fluid navbar-inverse">
+		  <div class="row col-lg-12">
+            <h1 class="organization-name">Cool Mint <small>Project</small></h1>
+            <form id="email-updates" class="email-signup mailer" action="/mailing-list/subscribe/" name="mc-embedded-subscribe-form" method="post" novalidate="">
+                <input id="EMAIL" name="email" placeholder="Email Address" type="email">
+                <label for="EMAIL">To receive our updates via email</label>
+            </form>
+				
+        	<nav>
+            	<ul class="col-lg-3 col-md-3 col-sm-6 list-unstyled">
+                	<li>About</li>
+                	<li><a href="/about/">The Project</a></li>
+                	<li><a href="/for-mac/">For Mac</a></li>
+                	<li><a href="/accounts/pricing/">Pricing</a></li>
+                	<li><a href="http://api.thenounproject.com">API</a></li>
+            	</ul>
+            
+            	<ul class="col-lg-3 col-md-3 col-sm-6 list-unstyled">
+					<li>Contribute</li>
+                	<li><a href="/iconathon/">Iconathon</a></li>
+                	<li><a href="/upload/">Upload</a></li>
+            	</ul>
+
+            	<ul class="col-lg-3 col-md-3 col-sm-6 list-unstyled">
+               		<li>Contact</li>
+                	<li><a class="email" href="mailto:info@thenounproject.com">Email</a></li>  
+                	<li><a target="_blank" href="http://twitter.com/nounproject">Twitter</a></li>
+                	<li><a target="_blank" href="http://instagram.com/nounproject">Instagram</a></li>  
+                	<li><a target="_blank" href="https://thenounproject.zendesk.com/hc/en-us">Feedback</a></li>
+                	<li><a href="/jobs/">Jobs</a></li>
+            	</ul>
+				
+            	<ul class="col-lg-3 col-md-3 col-sm-6 list-unstyled">
+                	<li>Legal</li>
+                	<li><a href="/legal#terms">Terms of Use</a></li>
+                	<li><a href="/legal#privacy">Privacy Policy</a></li>
+                	<li><a href="/legal#creators">Creators Terms</a></li>
+                	<li><a href="https://thenounproject.zendesk.com/hc/en-us" target="_blank">Frequent Questions</a></li>
+            	</ul>
+        	</nav>
+      	</div>
+	</div>	
+   </footer>
 
 
 

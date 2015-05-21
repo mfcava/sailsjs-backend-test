@@ -32,7 +32,9 @@ module.exports = {
 				//	Call not via GET is error
 			    //  --- 
 			var name = req.param('name');
-			ContentTag.findOneByName(name).populate('posts')
+			var names = name.split(",");
+		    Post.find( {select: ['id','title']} ).populate('tags', {name: names, select: ['id','name'] }  )
+			// ContentTag.find({name: names}).populate('posts', { select: ['id','title']} )
 				.exec(function(err,tags){
           			if(err)
             			res.json({error:err});

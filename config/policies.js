@@ -37,6 +37,9 @@ module.exports.policies = {
 		  '*': ['hasJsonWebToken', 'ValidJsonWebToken'],
 		login: true,
 		  jwt: true 
+		},
+	FileController: {
+		showImage: true 
 		}
   /***************************************************************************
   *                                                                          *

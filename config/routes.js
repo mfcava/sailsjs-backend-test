@@ -34,7 +34,7 @@ module.exports.routes = {
 
   '/': {
   	view: 'homepage'
-  }
+  },
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *
@@ -44,6 +44,7 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-
+  '/got/image/:filename': 'FileController.showImage',
+  '/got/image/:filename/:size': 'FileController.showImage'
 };
 	
